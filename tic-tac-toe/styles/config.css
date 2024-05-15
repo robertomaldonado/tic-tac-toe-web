@@ -24,3 +24,52 @@
   padding: 0.5rem;
   border: 1px solid #ccc;
 }
+
+.form-control input:focus{
+  outline-color: #0077cc;
+}
+
+#game-config{
+  width: 90%;
+  max-width: 40%;
+  margin: 3rem auto;
+  text-align: center;
+}
+
+#game-config ol{
+  list-style: none;
+  margin:0;
+  padding: 0;
+  display: flex;
+}
+
+#game-config li{
+  width: 50%;
+  margin:1rem;
+  padding: 1rem;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.5);
+}
+
+#game-config li:hover{
+  background-color: #f9f9f9;
+}
+
+#game-config h2{
+  margin: 0.5rem 0;
+  font-size: 1rem;
+}
+
+#game-config h3{
+  margin: 0.5rem 0;
+  font-size: 1.5rem;
+  color: #0077cc;
+}
+
+.player-symbol{
+  font-size: 2rem;
+  font-weight: bold;
+  color: #0077cc;
+  margin: 0.5rem 0;
+}
