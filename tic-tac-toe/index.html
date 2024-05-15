@@ -9,16 +9,18 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles/styles.css">
+  <link rel="stylesheet" href="styles/overlays.css">
 </head>
 
 <body>
+  <div id="backdrop"></div>
   <header id="main-header">
     <h1>Play Tic Tac Toe</h1>
     <p> Built with vanilla HTML, CSS and Js (& Copilot)</p>
   </header>
   <main>
-    <aside>
-      <h2>Player name</h2>
+    <aside class="modal">
+      <h2>Input your name: </h2>
       <form id="player-form">
         <div>
           <label for="player-name">Enter your name</label>
