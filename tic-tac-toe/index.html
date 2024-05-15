@@ -31,8 +31,9 @@
           <label for="player-name">Enter your name</label>
           <input type="text" id="player-name" name="player-name" required>
         </div>
+        <p id="config-errors"></p>
         <div>
-          <button class="btn btn-alt" type="button" id="cancel-config-btn">Cancel</button>
+          <button class="btn btn-alt" type="reset" id="cancel-config-btn">Cancel</button>
           <button class="btn" type="submit">Confirm</button>
         </div>
       </form>
@@ -44,7 +45,7 @@
             <h2>Player One</h2>
             <h3>PLAYER NAME</h3>
             <p class="player-symbol">X</p>
-            <button class="btn btn-alt" id="edit-player-one-btn">Edit</button>
+            <button class="btn btn-alt" id="edit-player-one-btn" data-playerid="1">Edit</button>
           </article>
         </li>
         <li>
@@ -52,7 +53,7 @@
             <h2>Player Two</h2>
             <h3>PLAYER NAME</h3>
             <p class="player-symbol">O</p>
-            <button class="btn btn-alt" id="edit-player-two-btn">Edit</button>
+            <button class="btn btn-alt" id="edit-player-two-btn" data-playerid="2">Edit</button>
           </article>
         </li>
       </ol>

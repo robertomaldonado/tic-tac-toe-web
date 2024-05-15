@@ -29,6 +29,16 @@
   outline-color: #0077cc;
 }
 
+.error input{
+  border-color: darkred;
+  color: rgb(131, 13, 0);
+  background-color:antiquewhite;
+}
+
+.error label{
+  color: rgb(131, 13, 0);
+}
+
 #game-config{
   width: 90%;
   max-width: 40%;
