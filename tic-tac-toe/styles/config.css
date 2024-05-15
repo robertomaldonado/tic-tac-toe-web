@@ -52,10 +52,6 @@
   box-shadow: 0 2px 4px rgba(0,0,0,0.5);
 }
 
-#game-config li:hover{
-  background-color: #f9f9f9;
-}
-
 #game-config h2{
   margin: 0.5rem 0;
   font-size: 1rem;
