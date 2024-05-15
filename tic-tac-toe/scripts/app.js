@@ -1,4 +1,10 @@
 let editedPlayer = null;
+
+const players = [
+  { id: "one", name: "", symbol: "X" },
+  { id: "two", name: "", symbol: "O" },
+];
+
 // Elements related to the overlay
 const playerConfigOverlayElm = document.getElementById("config-overlay");
 const backdropElm = document.getElementById("backdrop");

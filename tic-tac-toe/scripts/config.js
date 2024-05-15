@@ -31,5 +31,11 @@ const savePlayerConfig = (event) => {
 
   updatedPlayerDataElm.children[1].textContent = userPlayerName; // Update the player name
 
+  if (editedPlayer === "one") {
+    players[0].name = userPlayerName; // Update the player name in the players array
+  } else {
+    players[1].name = userPlayerName; // Update the player name in the players array
+  }
+
   closePlayerConfig(); // Close the overlay
 };
