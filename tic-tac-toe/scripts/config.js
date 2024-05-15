@@ -3,7 +3,6 @@ function openPlayerConfig(event) {
   editedPlayer = selectedPlayerId; // Set the edited player
   playerConfigOverlayElm.style.display = "block";
   backdropElm.style.display = "block";
-  console.log(editedPlayer);
 }
 
 function closePlayerConfig() {
