@@ -8,10 +8,13 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles/styles.css">
-  <link rel="stylesheet" href="styles/config.css">
-  <link rel="stylesheet" href="styles/game.css">
-  <link rel="stylesheet" href="styles/overlays.css">
+  <link rel="stylesheet" href="styles/styles.css" />
+  <link rel="stylesheet" href="styles/config.css" />
+  <link rel="stylesheet" href="styles/game.css" />
+  <link rel="stylesheet" href="styles/overlays.css" />
+  <script src="scripts/config.js" defer></script>
+  <script src="scripts/game.js" defer></script>
+  <script src="scripts/app.js" defer></script>
 </head>
 
 <body>
@@ -29,7 +32,7 @@
           <input type="text" id="player-name" name="player-name" required>
         </div>
         <div>
-          <button class="btn btn-alt" type="button">Cancel</button>
+          <button class="btn btn-alt" type="button" id="cancel-config-btn">Cancel</button>
           <button class="btn" type="submit">Confirm</button>
         </div>
       </form>
@@ -41,7 +44,7 @@
             <h2>Player One</h2>
             <h3>PLAYER NAME</h3>
             <p class="player-symbol">X</p>
-            <button class="btn btn-alt">Edit</button>
+            <button class="btn btn-alt" id="edit-player-one-btn">Edit</button>
           </article>
         </li>
         <li>
@@ -49,7 +52,7 @@
             <h2>Player Two</h2>
             <h3>PLAYER NAME</h3>
             <p class="player-symbol">O</p>
-            <button class="btn btn-alt">Edit</button>
+            <button class="btn btn-alt" id="edit-player-two-btn">Edit</button>
           </article>
         </li>
       </ol>
