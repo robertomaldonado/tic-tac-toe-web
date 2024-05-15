@@ -9,6 +9,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles/styles.css">
+  <link rel="stylesheet" href="styles/config.css">
   <link rel="stylesheet" href="styles/overlays.css">
 </head>
 
@@ -19,10 +20,10 @@
     <p> Built with vanilla HTML, CSS and Js (& Copilot)</p>
   </header>
   <main>
-    <aside class="modal">
-      <h2>Input your name: </h2>
+    <aside class="modal" id="config-overlay">
+      <h2>Name registration</h2>
       <form id="player-form">
-        <div>
+        <div class="form-control">
           <label for="player-name">Enter your name</label>
           <input type="text" id="player-name" name="player-name" required>
         </div>
