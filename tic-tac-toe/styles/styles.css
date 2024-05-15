@@ -1,0 +1,39 @@
+body{
+  margin: 0;
+  font-family: 'Caveat', sans-serif;
+  color: black;
+  background-color: azure;
+}
+
+#main-header{
+  background-color: #333;
+  color: white;
+  padding: 2rem 5%;
+  text-align: center;
+}
+
+.btn{
+  font: inherit;
+  background-color: #333;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+
+.btn-alt{
+  font: inherit;
+  background-color:transparent;
+  color: #333;
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+
+.btn:hover{
+  background-color: #555;
+}
+
+.btn-alt:hover{
+  background-color: #ddd;
+}

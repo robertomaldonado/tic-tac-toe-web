@@ -5,15 +5,18 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Tic-Tac-Toe The Game</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/styles.css">
 </head>
 
 <body>
-  <header>
+  <header id="main-header">
     <h1>Play Tic Tac Toe</h1>
-    <p> Built with vanilla HTML, CSS and Js</p>
+    <p> Built with vanilla HTML, CSS and Js (& Copilot)</p>
   </header>
   <main>
-    <!-- This is an overlay to input player name -->
     <aside>
       <h2>Player name</h2>
       <form id="player-form">
@@ -22,8 +25,8 @@
           <input type="text" id="player-name" name="player-name" required>
         </div>
         <div>
-          <button type="button">Cancel</button>
-          <button type="submit">Confirm</button>
+          <button class="btn btn-alt" type="button">Cancel</button>
+          <button class="btn" type="submit">Confirm</button>
         </div>
       </form>
     </aside>
@@ -31,22 +34,22 @@
       <ol>
         <li>
           <article>
-            <h2>PLayer One</h2>
+            <h2>Player One</h2>
             <h3>PLAYER NAME</h3>
             <p>X</p>
-            <button>Edit</button>
+            <button class="btn btn-alt">Edit</button>
           </article>
         </li>
         <li>
           <article>
-            <h2>PLayer Two</h2>
+            <h2>Player Two</h2>
             <h3>PLAYER NAME</h3>
             <p>O</p>
-            <button>Edit</button>
+            <button class="btn btn-alt">Edit</button>
           </article>
         </li>
       </ol>
-      <button id="start-game">Start New Game</button>
+      <button class="btn" id="start-game">Start New Game</button>
     </section>
     <section id="active-game">
       <article>
