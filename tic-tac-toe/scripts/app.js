@@ -20,6 +20,10 @@ const editPlaerOneBtnElm = document.getElementById("edit-player-one-btn");
 const editPlaerTwoBtnElm = document.getElementById("edit-player-two-btn");
 const cancelConfigBtnElm = document.getElementById("cancel-config-btn");
 
+// Select the element to start a new game
+const startGameBtnElm = document.getElementById("start-game");
+const activeGameSection = document.getElementById("active-game");
+
 // Add event listeners to the player buttons
 editPlaerOneBtnElm.addEventListener("click", openPlayerConfig);
 editPlaerTwoBtnElm.addEventListener("click", openPlayerConfig);
@@ -30,3 +34,6 @@ backdropElm.addEventListener("click", closePlayerConfig);
 
 // Add event listener to the form submit button
 formElm.addEventListener("submit", savePlayerConfig);
+
+// Add event listener to the start game button
+startGameBtnElm.addEventListener("click", startNewGame);
