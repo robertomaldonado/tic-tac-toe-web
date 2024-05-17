@@ -1,5 +1,6 @@
 let editedPlayer = null;
 let activePlayerId = 0;
+let roundCount = 1;
 
 const players = [
   { id: "one", name: "", symbol: "X" },
