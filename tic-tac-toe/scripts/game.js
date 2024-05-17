@@ -30,28 +30,28 @@ function selectGameField(event) {
     selectedField.classList.add("disabled"); // Disable the field
 
     activePlayerId = activePlayerId === 1 ? 0 : 1; //Swap players
-    roundCount++; // Increment the round count
     activePlayerElm.textContent = players[activePlayerId].name; // Update the current player
     const clicked_col = parseInt(selectedField.dataset.col);
     const clicked_row = parseInt(selectedField.dataset.row);
     board_game[clicked_row - 1][clicked_col - 1] =
       currentPlayer.id === "one" ? 1 : 2; // Update the board
-    const winnerId = checkForGameOver();
-    if (winnerId !== 0) endGame(winnerId);
-    selectedField.removeEventListener("click", selectGameField); // Remove the event listener
   }
-
-  if (roundCount === 9) {
-    return -1;
+  const winnerId = checkForGameOver();
+  if (winnerId === 0 && roundCount === 9) {
+    endGame(0);
+  } else if (winnerId !== 0) {
+    endGame(winnerId);
   }
-  return 0;
+  selectedField.removeEventListener("click", selectGameField); // Remove the event listener
+  roundCount++; // Increment the round count
 }
 
 function endGame(winnerId) {
   gameOverElm.style.display = "block"; // Display the game over area
   winnerOutputElm.textContent = winnerId;
+  winnerName = players[winnerId - 1].name;
   winnerOutputElm.textContent =
-    winnerId === 0 ? "It's a draw" : players[winnerId - 1].name + " wins!";
+    winnerId === 0 ? "It's a draw" : winnerName + " wins!";
   gameFieldElms.forEach((field) =>
     field.removeEventListener("click", selectGameField)
   );
