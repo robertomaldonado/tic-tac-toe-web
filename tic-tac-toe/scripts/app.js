@@ -1,4 +1,5 @@
 let editedPlayer = null;
+let activePlayerId = 0;
 
 const players = [
   { id: "one", name: "", symbol: "X" },
@@ -23,6 +24,8 @@ const cancelConfigBtnElm = document.getElementById("cancel-config-btn");
 // Select the element to start a new game
 const startGameBtnElm = document.getElementById("start-game");
 const activeGameSection = document.getElementById("active-game");
+const gameFieldElms = document.querySelectorAll("#game-board li");
+const activePlayerElm = document.querySelector("#active-player-name");
 
 // Add event listeners to the player buttons
 editPlaerOneBtnElm.addEventListener("click", openPlayerConfig);
@@ -37,3 +40,8 @@ formElm.addEventListener("submit", savePlayerConfig);
 
 // Add event listener to the start game button
 startGameBtnElm.addEventListener("click", startNewGame);
+
+// Add event listener to the game field
+gameFieldElms.forEach((field) => {
+  field.addEventListener("click", selectGameField);
+});
