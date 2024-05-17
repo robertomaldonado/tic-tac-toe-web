@@ -1,3 +1,5 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/9fc9af05-6e78-4f8a-8f71-5843ab1375c8/deploy-status)](https://app.netlify.com/sites/clever-tic-tac-toe/deploys)
+
 # Web dev Projects
 
 Some of he project that I have developed while testing different technologies.
