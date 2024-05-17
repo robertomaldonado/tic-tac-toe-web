@@ -7,7 +7,7 @@ const players = [
   { id: "two", name: "", symbol: "O" },
 ];
 
-const board_game = [
+let board_game = [
   [0, 0, 0],
   [0, 0, 0],
   [0, 0, 0],
@@ -22,6 +22,10 @@ const formElm = document.querySelector("form");
 
 // Select the element to display errors
 const errorsOutputElm = document.getElementById("config-errors");
+// Select the element to display the game over area
+const gameOverElm = document.getElementById("game-over");
+// Select the element to display the winner
+const winnerOutputElm = document.getElementById("winner-game");
 
 // Elements related to the game config
 const editPlaerOneBtnElm = document.getElementById("edit-player-one-btn");

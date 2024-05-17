@@ -5,6 +5,20 @@ function startNewGame() {
   }
   activeGameSection.style.display = "block"; // Display the game section
   activePlayerElm.textContent = players[activePlayerId].name; // Set the current player
+  gameOverElm.style.display = "none"; // Hide the game over area
+  gameFieldElms.forEach((field) => {
+    field.textContent = ""; // Clear the field
+    field.classList.remove("disabled"); // Enable the field
+    field.addEventListener("click", selectGameField); // Add the event listener
+  });
+  board_game = [
+    [0, 0, 0],
+    [0, 0, 0],
+    [0, 0, 0],
+  ];
+  activePlayerId = 0;
+  roundCount = 1;
+  activePlayerElm.textContent = players[activePlayerId].name; // Set the current player
 }
 
 function selectGameField(event) {
@@ -23,6 +37,7 @@ function selectGameField(event) {
     board_game[clicked_row - 1][clicked_col - 1] =
       currentPlayer.id === "one" ? 1 : 2; // Update the board
     const winnerId = checkForGameOver();
+    if (winnerId !== 0) endGame(winnerId);
     selectedField.removeEventListener("click", selectGameField); // Remove the event listener
   }
 
@@ -30,6 +45,16 @@ function selectGameField(event) {
     return -1;
   }
   return 0;
+}
+
+function endGame(winnerId) {
+  gameOverElm.style.display = "block"; // Display the game over area
+  winnerOutputElm.textContent = winnerId;
+  winnerOutputElm.textContent =
+    winnerId === 0 ? "It's a draw" : players[winnerId - 1].name + " wins!";
+  gameFieldElms.forEach((field) =>
+    field.removeEventListener("click", selectGameField)
+  );
 }
 
 function checkForGameOver() {
