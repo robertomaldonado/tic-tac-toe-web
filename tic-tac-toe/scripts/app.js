@@ -6,6 +6,12 @@ const players = [
   { id: "two", name: "", symbol: "O" },
 ];
 
+const board_game = [
+  [0, 0, 0],
+  [0, 0, 0],
+  [0, 0, 0],
+];
+
 // Elements related to the overlay
 const playerConfigOverlayElm = document.getElementById("config-overlay");
 const backdropElm = document.getElementById("backdrop");

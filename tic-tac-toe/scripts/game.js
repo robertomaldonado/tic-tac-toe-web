@@ -9,11 +9,17 @@ function startNewGame() {
 
 function selectGameField(event) {
   const selectedField = event.target;
+
   if (selectedField.textContent === "") {
     const currentPlayer = players[activePlayerId]; //TO-DO: Change the current player based on the game logic
     selectedField.textContent = currentPlayer.symbol; // Set the player symbol
     selectedField.classList.add("disabled"); // Disable the field
     activePlayerId = activePlayerId === 1 ? 0 : 1; //Swap players
     activePlayerElm.textContent = players[activePlayerId].name; // Update the current player
+    const clicked_col = parseInt(selectedField.dataset.col);
+    const clicked_row = parseInt(selectedField.dataset.row);
+    board_game[clicked_row - 1][clicked_col - 1] =
+      currentPlayer.id === "one" ? 1 : 2; // Update the board
+    selectedField.removeEventListener("click", selectGameField); // Remove the event listener
   }
 }
